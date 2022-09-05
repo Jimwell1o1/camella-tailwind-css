@@ -14,6 +14,8 @@
         aos_init();
 
         // For white space animation bug solution
+        //https://github.com/michalsnik/aos/issues/626
+        
         setTimeout(function () {
             var x = document.querySelectorAll(".animation");
             for (var i = 0; i < x.length; i++) {
