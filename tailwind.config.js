@@ -10,7 +10,7 @@ module.exports = {
         backgroundImage: {
             'hero-camella': "url('../src/assets/img/header.jpg')",
             'top-bg-house-camella': "url('../src/assets/img/top_bg_house.png')",
-            'footer-camella': "url('../src/assets/img/footer-bg.jpg')",
+            'footer-camella': "url('../src/assets/img/footer-img.png')",
         }
     },
     fontFamily: {
