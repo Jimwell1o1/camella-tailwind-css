@@ -12,8 +12,19 @@
     }
     window.addEventListener('load', () => {
         aos_init();
+
+        // For white space animation bug solution
+        setTimeout(function () {
+            var x = document.querySelectorAll(".animation");
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.overflowX = "hidden";
+            }
+        }, 500);
+        //End of the solution
+
     });
 
+    // For Navbar icon menu and close 
     function Menu(){
         console.log('1')
         let list = document.getElementById('nav_head')
@@ -31,13 +42,14 @@
             e.name = "menu", list.classList.add('hidden')
         }
   
-       
-        // // button.
-        // let nav = document.getElementsByClassName('navbar')
-        // if (nav.classList.contains('hidden')) {
-        //     nav.style.display = "block"
-        // } else {
-        //     nav.style.display = "none"
-        // }
     }
 
+    //For Navbar closing/hidden the nav when in mobile
+    function Nav(){
+        let list = document.getElementById('nav_head')
+        let e = document.getElementById("menu")
+
+        e.name = "menu"
+        list.classList.add('hidden')
+
+    }
