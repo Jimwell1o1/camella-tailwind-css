@@ -34,6 +34,7 @@
         let e = document.getElementById("menu")
         if(e.name === 'menu'){
             e.name = "close"
+
             list.classList.add('display')
 
             list.classList.remove('hidden')
