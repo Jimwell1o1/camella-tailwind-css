@@ -25,60 +25,61 @@
     <!-- AOS ANIMATION -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body onresize="removeMargin()">
 
-    <nav class="sticky lg:static top-0 z-50 lg:overflow-hidden overflow-auto flex bg-amber-50 lg:content-center lg:items-center justify-between items-center">
+
+    <nav class="sticky md:static top-0 z-50 lg:overflow-hidden overflow-auto flex bg-amber-50 lg:content-center lg:items-center justify-between items-center">
         <div class="flex flex-wrap lg:justify-center lg:items-center mx-auto px-auto md:px-auto py-2.5 lg:content-center md:content-start md:items-start">
                 <a href="https://dev5.primeoutsourcing.shop/tailwind/src"><img src="./assets/img/logo.png" class="logo h-[4em] lg:h-[6em] xl:h-[7em]" alt="Camella Logo"></a>
         </div>
-            <span class="text-3xl cursor-pointer lg:hidden mx-2">
-                <ion-icon name="menu-outline" id="menu" onclick="Menu()"></ion-icon>
+            <span class="text-3xl cursor-pointer md:hidden mx-2">
+                <ion-icon class="menu-nav" name="menu-outline" id="menu" onclick="Menu(this)"></ion-icon>
             </span>
     </nav>
 
 <!-- sticky top-0 z-50 -->
-    <nav class="sticky top-20 lg:top-0 z-50 navbar bg-gradient-to-r from-green-camella to-darkgreen-camella py-7 hidden sm:pl-[50px] lg:flex lg:flex-wrap lg:content-center lg:justify-center lg:items-center" id="nav_head">
-        <div class="flex flex-wrap justify-left pl-10">
-            <ul class="lg:font-bold uppercase text-lg lg:flex lg:flex-wrap lg:content-center lg:justify-center lg:items-center font-Raleway font-bold" onclick="Nav()">
-                <li class="text-zinc-50 mr-10 hover:text-yellow-300" data-aos="zoom-out-down" data-aos-delay="100"><a href="#">Home</a></li>
-                <li class="text-zinc-50 mr-10 hover:text-yellow-300" data-aos="zoom-out-down" data-aos-delay="200"><a href="#ProjectDetails">Location</a></li>
-                <li class="text-zinc-50 mr-10 hover:text-yellow-300" data-aos="zoom-out-down" data-aos-delay="300"><a href="#model-house">House Model</a></li>
-                <li class="text-zinc-50 mr-10 hover:text-yellow-300" data-aos="zoom-out-down" data-aos-delay="400"><a href="">Easy Guide</a></li>
-                <li class="text-zinc-50 mr-10 hover:text-yellow-300" data-aos="zoom-out-down" data-aos-delay="500"><a href="">Buyer's Guide</a></li>
-                <li class="text-zinc-50 mr-10 hover:text-yellow-300" data-aos="zoom-out-down" data-aos-delay="600"><a href="#contact">Contact Us</a></li>
+    <nav class="sticky top-20 md:top-0 z-50 navbar bg-gradient-to-r from-green-camella to-darkgreen-camella py-7 hidden md:flex md:flex-wrap md:content-center md:justify-center md:items-center" id="nav_head">
+        <div class="flex flex-wrap justify-center">
+            <ul class="lg:font-bold uppercase text-sm md:text-[13px] space-y-5 md:space-x-8 md:space-y-0 lg:text-lg md:flex md:flex-wrap md:content-center md:justify-center md:items-center font-Raleway font-bold text-center">
+                <li class="text-zinc-50 hover:text-yellow-300" data-aos="zoom-out-down" data-aos-delay="100"><a href="">Home</a></li>
+                <li class="text-zinc-50 hover:text-yellow-300" data-aos="zoom-out-down" data-aos-delay="200"><a href="">Location</a></li>
+                <li class="text-zinc-50 hover:text-yellow-300" data-aos="zoom-out-down" data-aos-delay="300"><a href="">House Model</a></li>
+                <li class="text-zinc-50 hover:text-yellow-300" data-aos="zoom-out-down" data-aos-delay="400"><a href="">Easy Guide</a></li>
+                <li class="text-zinc-50 hover:text-yellow-300" data-aos="zoom-out-down" data-aos-delay="500"><a href="">Buyer's Guide</a></li>
+                <li class="text-zinc-50 hover:text-yellow-300" data-aos="zoom-out-down" data-aos-delay="600"><a href="">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
-
+<main>
  <!-- Hero Section -->
-    <header class="z-40 w-full h-full lg:h-3/4 pb-40 xl:pb-60 bottom-9 bg-hero-camella bg-cover bg-center flex justify-center bg-green-900/30 bg-blend-overlay">
+    <section id="hero" class="z-40 w-full h-full lg:h-3/4 pb-40 xl:pb-60 bottom-9 bg-hero-camella bg-cover bg-center flex justify-center bg-green-900 bg-blend-overlay-darken">
         <div class="relative w-full flex flex-col items-center mt-16 lg:mt-36 bg-blue/[0.5] font-Raleway animation px-6 md:px-20 lg:px-16">
             <h1 class="header text-center text-4xl lg:text-5xl 2xl:text-7xl text-white font-bold drop-shadow-2xl" data-aos="zoom-out" data-aos-delay="800">Camela General Trias</h1>
             <p class="desc mt-5 text-center lg:text-xl 2xl:text-3xl font-thin text-white mb-2 text-[16px] drop-shadow-2xl px-2" data-aos="zoom-out" data-aos-delay="1200">Finding Solution in Buy and Sell Homes, helping people the right decision of Real Estate Investment.</p>
 
-            <div class="block mx-4 p-4 sm:px-20 lg:px-4 2xl:px-2 w-full lg:w-full 2xl:w-[80%] search mt-2 h-50 lg:h-full 2xl:h-48 bg-black/[0.4] justify-center items-center content-center" data-aos="fade-up" data-aos-delay="1400">
+            <div class="block mx-4 p-4 sm:px-20 lg:px-0 w-full lg:w-full 2xl:w-[80%] mt-2 h-50 lg:h-full 2xl:h-48 bg-black/[0.4] justify-center items-center content-center" data-aos="fade-up" data-aos-delay="1400">
                 <form class="block w-full justify-center content-center lg:block" action="" method="post">
-                    <div class="block lg:flex lg:flex-wrap content-center justify-center">
-                        <select class="pl-3 text-[12px] sm:text-sm lg:text-sm 2xl:text-xl py-2 my-2 text-gray-600 lg:mr-4 w-full lg:w-[22%]">
+                    <div class="block lg:flex lg:flex-wrap content-center justify-center lg:gap-x-3">
+                        <select class="text-[12px] sm:text-sm lg:text-sm 2xl:text-xl p-2 2xl:py-3 my-2 text-gray-600 w-full lg:w-[23%]">
                             <option selected disabled>Project Type</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
                         </select>
-                        <select class="pl-3 text-[12px] sm:text-sm lg:text-sm 2xl:text-xl py-2 my-2 text-gray-600 lg:mr-5 w-full lg:w-[22%]">
+                        <select class="text-[12px] sm:text-sm lg:text-sm 2xl:text-xl p-2 2xl:py-3 my-2 text-gray-600 w-full lg:w-[24%]">
                             <option selected disabled>Brand</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
                         </select>
-                        <select class="pl-3 text-[12px] sm:text-sm lg:text-sm 2xl:text-xl py-2 my-2 text-gray-600 lg:mr-5 w-full lg:w-[22%]">
+                        <select class="text-[12px] sm:text-sm lg:text-sm 2xl:text-xl p-2 2xl:py-3 my-2 text-gray-600 w-full lg:w-[24%]">
                             <option selected disabled>Location</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
                         </select>
-                        <select class="pl-3 text-[12px] sm:text-sm lg:text-sm 2xl:text-xl py-2 my-2 text-gray-600 lg:mr-5 w-full lg:w-[22%]">
+                        <select class="text-[12px] sm:text-sm lg:text-sm 2xl:text-xl p-2 2xl:py-3 my-2 text-gray-600 w-full lg:w-[23%]">
                             <option selected disabled>Price Range</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -97,7 +98,7 @@
             </div>
 
         </div>
-    </header>
+    </section>
 <!-- End of Hero Section -->
 
 <!-- Project Details Section -->
@@ -171,8 +172,8 @@
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-5 gap-y-4 lg:gap-y-5 xl:gap-y-7 gap-x-3 mb-32 mt-20 justify-center content-center items-center mx-6 md:mx-20 lg:mx-16 xl:mx-60 4k:mx-[35rem]">  
 
-                <div class="py-2 lg:px-0 flex justify-center content-center" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="w-full max-w-md bg-white border border-white shadow-md">
+                <div class="py-2 lg:px-0 flex justify-center content-center " data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-full max-w-md bg-white border border-white cursor-pointer hover:shadow-2xl transition-all ease-in duration-200 shadow-md">
                             <img class="p-2 object-cover xl:h-72 xl:w-[600px]" src="./assets/img/house-01.jpg" alt="">
                         <div class="p-5 pt-0">
                             <h5 class="mb-1 text-xl font-bold tracking-tight text-[#1b7454]">Camella Greta</h5>
@@ -188,7 +189,7 @@
                 </div>
 
                 <div class="py-2 lg:px-0 flex justify-center content-center" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="w-full max-w-md bg-white border border-white shadow-md">
+                    <div class="w-full max-w-md bg-white border border-white cursor-pointer hover:shadow-2xl transition-all ease-in duration-200 shadow-md">
                             <img class="p-2 object-cover xl:h-72 xl:w-[600px]" src="./assets/img/house-02.jpg" alt="">
                         <div class="p-5 pt-0">
                             <h5 class="mb-1 text-xl font-bold tracking-tight text-[#1b7454]">Camella Freya</h5>
@@ -204,7 +205,7 @@
                 </div>
 
                 <div class="py-2 lg:px-0 flex justify-center content-center" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="w-full max-w-md bg-white border border-white shadow-md">
+                    <div class="w-full max-w-md bg-white border border-white cursor-pointer hover:shadow-2xl transition-all ease-in duration-200 shadow-md">
                             <img class="p-2 object-cover xl:h-72 xl:w-[600px]" src="./assets/img/house-03.jpg" alt="">
                         <div class="p-5 pt-0">
                             <h5 class="mb-1 text-xl font-bold tracking-tight text-[#1b7454]">Camella Ella</h5>
@@ -220,7 +221,7 @@
                 </div>
 
                 <div class="py-2 lg:px-0 flex justify-center content-center" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="w-full max-w-md bg-white border border-white shadow-md">
+                    <div class="w-full max-w-md bg-white border border-white cursor-pointer hover:shadow-2xl transition-all ease-in duration-200 shadow-md">
                             <img class="p-2 object-cover xl:h-72 xl:w-[600px]" src="./assets/img/house-01.jpg" alt="">
                         <div class="p-5 pt-0">
                             <h5 class="mb-1 text-xl font-bold tracking-tight text-[#1b7454]">Camella Greta</h5>
@@ -236,7 +237,7 @@
                 </div>
 
                 <div class="py-2 lg:px-0 flex justify-center content-center" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="w-full max-w-md bg-white border border-white shadow-md">
+                    <div class="w-full max-w-md bg-white border border-white cursor-pointer hover:shadow-2xl transition-all ease-in duration-200 shadow-md">
                             <img class="p-2 object-cover xl:h-72 xl:w-[600px]" src="./assets/img/house-02.jpg" alt="">
                         <div class="p-5 pt-0">
                             <h5 class="mb-1 text-xl font-bold tracking-tight text-[#1b7454]">Camella Freya</h5>
@@ -252,7 +253,7 @@
                 </div>
 
                 <div class="py-2 lg:px-0 flex justify-center content-center" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="w-full max-w-md bg-white border border-white shadow-md">
+                    <div class="w-full max-w-md bg-white border border-white cursor-pointer hover:shadow-2xl transition-all ease-in duration-200 shadow-md">
                             <img class="p-2 object-cover xl:h-72 xl:w-[600px]" src="./assets/img/house-03.jpg" alt="">
                         <div class="p-5 pt-0">
                             <h5 class="mb-1 text-xl font-bold tracking-tight text-[#1b7454]">Camella Ella</h5>
@@ -267,7 +268,7 @@
                     </div>
                 </div>
                 <div class="py-2 lg:px-0 flex justify-center content-center" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="w-full max-w-md bg-white border border-white shadow-md">
+                    <div class="w-full max-w-md bg-white border border-white cursor-pointer hover:shadow-2xl transition-all ease-in duration-200 shadow-md">
                             <img class="p-2 object-cover xl:h-72 xl:w-[600px]" src="./assets/img/house-01.jpg" alt="">
                         <div class="p-5 pt-0">
                             <h5 class="mb-1 text-xl font-bold tracking-tight text-[#1b7454]">Camella Greta</h5>
@@ -283,7 +284,7 @@
                 </div>
 
                 <div class="py-2 lg:px-0 flex justify-center content-center" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="w-full max-w-md bg-white border border-white shadow-md">
+                    <div class="w-full max-w-md bg-white border border-white cursor-pointer hover:shadow-2xl transition-all ease-in duration-200 shadow-md">
                             <img class="p-2 object-cover xl:h-72 xl:w-[600px]" src="./assets/img/house-02.jpg" alt="">
                         <div class="p-5 pt-0">
                             <h5 class="mb-1 text-xl font-bold tracking-tight text-[#1b7454]">Camella Freya</h5>
@@ -299,7 +300,7 @@
                 </div>
 
                 <div class="py-2 lg:px-0 flex justify-center content-center" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="w-full max-w-md bg-white border border-white shadow-md">
+                    <div class="w-full max-w-md bg-white border border-white cursor-pointer hover:shadow-2xl transition-all ease-in duration-200 shadow-md">
                             <img class="p-2 object-cover xl:h-72 xl:w-[600px]" src="./assets/img/house-03.jpg" alt="">
                         <div class="p-5 pt-0">
                             <h5 class="mb-1 text-xl font-bold tracking-tight text-[#1b7454]">Camella Ella</h5>
@@ -364,20 +365,20 @@
                     <h4 class="font-bold text-2xl lg:text-4xl md:text-3xl xl:text-5xl">Get in Touch with Us!</h4>
                         <form class="mt-10">
                                 <div class="mb-6">
-                                    <input type="text" id="first_name" class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-green-500 focus:border-blue-500 block w-full p-2.5 lg:text-[17px]" placeholder="Name" required>
+                                    <input type="text" id="first_name" class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-green-500 focus:border-blue-500 block w-full p-2.5 lg:p-4 lg:text-[17px]" placeholder="Name" required>
                                 </div> 
                                 <div class="grid gap-6 mb-6 lg:grid-cols-1 xl:grid-cols-2">
                                     <div>
-                                        <input type="text" id="first_name" class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-green-500 focus:border-blue-500 block w-full p-2.5 lg:text-[17px]" placeholder="Email" required>
+                                        <input type="text" id="first_name" class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-green-500 focus:border-blue-500 block w-full p-2.5 lg:p-4 lg:text-[17px]" placeholder="Email" required>
                                     </div>
                                     <div>
-                                        <input type="text" id="first_name" class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-green-500 focus:border-blue-500 block w-full p-2.5 lg:text-[17px]" placeholder="Phone" required>
+                                        <input type="text" id="first_name" class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-green-500 focus:border-blue-500 block w-full p-2.5 lg:p-4 lg:text-[17px]" placeholder="Phone" required>
                                     </div>
                                 </div>
                                 <div class="mb-6">
-                                    <textarea id="message" rows="4" class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-green-500 focus:border-blue-500 block w-full p-2.5 lg:text-[17px]" placeholder="Your message..."></textarea>
+                                    <textarea id="message" rows="4" class="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-green-500 focus:border-blue-500 block w-full p-2.5 lg:p-4 lg:text-[17px]" placeholder="Your message..."></textarea>
                                 </div> 
-                                <button type="submit" class="text-[#fbecf1] bg-green-camella hover:bg-[#508745] focus:ring-4 focus:outline-none focus:ring-green-300 text-sm xl:text-md w-full sm:w-auto px-16 py-2.5 lg:py-3 lg:text-md lg:px-14 text-center">Send Message</button>
+                                <button type="submit" class="text-[#fbecf1] font-Raleway font-medium bg-green-camella hover:bg-[#508745] focus:ring-4 focus:outline-none focus:ring-green-300 text-sm xl:text-md 2xl:text-lg w-full sm:w-auto px-16 py-2.5 lg:py-3 lg:text-md lg:px-14 text-center">Send Message</button>
                         </form>
                 </div>
 
@@ -389,11 +390,11 @@
 
     </section>
 <!-- End of Contact Section -->
-
+</main>
 
 <!-- Footer Section -->
     <footer>
-        <div class="w-full flex flex-wrap mt-10 pb-24 bg-footer-camella bg-cover bg-center bg-no-repeat bg-green-500/5 bg-blend-overlay lg:justify-start xl:pl-[10rem] 4k:pl-0 4k:pl-[18rem] 4k:justify-center">
+        <div class="w-full flex flex-wrap mt-10 pb-24 bg-footer-camella bg-cover bg-right bg-no-repeat bg-green-500/5 bg-blend-overlay lg:justify-start xl:pl-[10rem] 4k:pl-[18rem] 4k:justify-center">
             
             <div class="pt-11 justify-center content-center text-center lg:justify-start lg:content-start lg:text-start lg:w-2/4 xl:w-[35rem] mx-6 md:mx-20 lg:mx-0 lg:px-14"> 
                 <div class="flex justify-center lg:block lg:justify-start">
